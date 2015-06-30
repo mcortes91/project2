@@ -9,6 +9,9 @@ var express         = require('express'),
     session         = require('express-session'),
     expressLayouts  = require('express-ejs-layouts');
 
+//This sets it to the porcess PORT. If it's defined on Heroku, otherwise it will go to 3000
+var PORT = process.env.PORT || 3000;
+
     //SET
 server.set('views', './views');
 server.set('view engine', 'ejs');
