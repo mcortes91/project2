@@ -63,7 +63,7 @@ db.on('error', function(err) {
 
 db.once('open', function() {
     console.log('Database up and running!');
-    server.listen(3000, function() {
+    server.listen(PORT, function() {
         console.log('Server up and running');
     })
 })
