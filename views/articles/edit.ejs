@@ -1,0 +1,10 @@
+<form action="/articles/<%=article._id%>/?_method=PATCH" method="post">
+	<label>Author:</label>
+	<input type="text" name="article[author]" value="<%=article.author%>"/>
+	<label>To Do:</label>
+	<input type="text" name="article[title]" value="<%=article.title%>">
+	<label>Desc:</label>
+	<textarea name="article[content]" ><%=article.content%></textarea>
+	<input type="submit" value="Update this jont"/><br>
+</form>
+

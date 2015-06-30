@@ -1,0 +1,41 @@
+<div id="side_panel">
+	<img src="/images/sports.png"/>
+	<h3>Content</h3>
+</div>
+<div id="top_panel">
+	<% if(currentUser && currentUser == article.author) { %>
+	<% include edit_buttons.ejs %>	
+	<%}%>
+<h4>Last modified by: <em><%= article.author%></em></h4>
+</div>
+
+<hr>
+
+<div id="main_panel">
+	<h1> <%= article.title%> </h1>
+	<div class="image_box">
+		<ul>
+			<li><img src="/images/substitute.png"/></li>
+			<li><img src="/images/substitute.png"/></li>
+			<li><img src="/images/substitute.png"/></li>
+			<li><img src="/images/substitute.png"/></li>
+		</ul>
+	</div>
+	<div class="overview_content">
+		<h2>Overview</h2>
+		<p><%= article.overview %></p>
+	</div>
+	<hr>
+	<div class="history_content">
+		<h2>History</h2>
+		<p><%= article.history %></p>
+	</div>
+	<hr>
+	<div class="rules_content">
+		<h2>Rules</h2>
+		<p><%= article.rules %></p>
+	</div>
+</div>
+
+
+

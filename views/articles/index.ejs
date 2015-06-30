@@ -1,0 +1,8 @@
+<dl>
+<% articles.forEach(function(article, i) { %>
+<a href="/articles/<%=article.id%>">
+<dt><%= article.title %></dt></a>
+<%});%>
+</dl>
+
+<a href="/articles/new">Create new Article</a>
