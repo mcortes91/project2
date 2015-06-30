@@ -54,6 +54,7 @@ server.use(function(req, res) {
 
 //DATABASE + server
 mongoose.connect(MONGOURI);
+console.log(MONGOURI);
 var db = mongoose.connection;
 db.on('error', function() {
     console.log('Database errors!');
