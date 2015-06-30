@@ -11,6 +11,7 @@ var express         = require('express'),
 
 //This sets it to the porcess PORT. If it's defined on Heroku, otherwise it will go to 3000
 var PORT = process.env.PORT || 3000;
+var MONGOURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/Company';
 
     //SET
 server.set('views', './views');
@@ -52,7 +53,7 @@ server.use(function(req, res) {
 });
 
 //DATABASE + server
-mongoose.connect('mongodb://localhost:27017/Company');
+mongoose.connect(MONGOURI);
 var db = mongoose.connection;
 db.on('error', function() {
     console.log('Database errors!');
