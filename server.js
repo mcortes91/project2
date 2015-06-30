@@ -56,8 +56,9 @@ server.use(function(req, res) {
 mongoose.connect(MONGOURI);
 console.log(MONGOURI);
 var db = mongoose.connection;
-db.on('error', function() {
+db.on('error', function(err) {
     console.log('Database errors!');
+    console.log(err);
 });
 
 db.once('open', function() {
