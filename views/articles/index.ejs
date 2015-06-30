@@ -1,8 +1,23 @@
-<dl>
+
 <% articles.forEach(function(article, i) { %>
-<a href="/articles/<%=article.id%>">
-<dt><%= article.title %></dt></a>
+<div class="accordion">
+			<input type="checkbox"
+					name="section"
+					id="section1"
+					value="1">
+			<label for="section1"><%= article.title %></label>
+			<div class="section">
+				<dl>
+					<%= article.desc%>
+					<a href="/articles/<%=article.id%>">Read more...</a>
+					<ul>
+						<li> Created by: <%= article.author%></li>
+						<li> Last modified: <%= article.created_at%></li>
+					</ul>
+				</dl>
+			</div>
+
+</div>
 <%});%>
-</dl>
 
 <a href="/articles/new">Create new Article</a>

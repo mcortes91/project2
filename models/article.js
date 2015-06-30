@@ -6,7 +6,9 @@ var articleSchema = Schema({
     title: { type: String, required: true },
     overview: String,
     history: String,
-    rules: String
+    rules: String,
+    desc: String,
+    created_at: { type: Date, default: Date.now }
 });
 
 var Article = mongoose.model("Article", articleSchema);
