@@ -1,6 +1,6 @@
 # WikiSports
 
-![my Wireframe!](/images/wireframe.jpg)
+![my Wireframe](views/images/wireframe.jpg)
 
 ## Features
 
