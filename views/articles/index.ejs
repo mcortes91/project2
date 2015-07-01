@@ -1,23 +1,32 @@
 
-<% articles.forEach(function(article, i) { %>
-<div class="accordion">
+<h3>Welcome</h3>
+<div id="create-article">
+	<button><a href="/articles/new">Create new Article</a></button>
+</div>
+
+<div id="list-box">
+	<% articles.forEach(function(article, i) { %>
+		<div class="accordion">
 			<input type="checkbox"
 					name="section"
-					id="section1"
+					id="section<%=i%>"
 					value="1">
-			<label for="section1"><%= article.title %></label>
+			<label for="section<%=i%>"><%= article.title %></label>
 			<div class="section">
-				<dl>
-					<%= article.desc%>
-					<a href="/articles/<%=article.id%>">Read more...</a>
-					<ul>
-						<li> Created by: <%= article.author%></li>
-						<li> Last modified: <%= article.created_at%></li>
-					</ul>
-				</dl>
+				<table>
+					<tr>
+						<th>Description</th>
+						<th>Created By</th>
+						<th>Last Modified</th>
+					</tr>
+					<tr>
+						<td><%= article.desc%> <a href="/articles/<%=article.id%>">Read more...</a></td>
+						<td><%= article.author%></td>
+						<td><%= article.created_at%></td>
+					</tr>
+				</table>
 			</div>
-
+		</div>
+	<%});%>
 </div>
-<%});%>
 
-<a href="/articles/new">Create new Article</a>

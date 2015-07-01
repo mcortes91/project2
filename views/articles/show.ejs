@@ -1,15 +1,18 @@
 <div id="side_panel">
-	<img src="/images/sports.png"/>
-	<h3>Content</h3>
+	<h3>Table of Content</h3>
+	<ul>
+		<li><h4><a href="#overview">Overview</a></h4></li>
+		<li><h4><a href="#history">History</a></h4></li>
+		<li><h4><a href="#rules">Rules</a></h4></li>
+		<li><h4><a href="/articles">Go back</a></h4></li>
+		<li><h4><a href="/">Go Home</a></h4></li>
+	</ul>
 </div>
 <div id="top_panel">
 	<% if(currentUser && currentUser == article.author) { %>
 	<% include edit_buttons.ejs %>	
 	<%}%>
-<h4>Last modified by: <em><%= article.author%></em></h4>
 </div>
-
-<hr>
 
 <div id="main_panel">
 	<h1> <%= article.title%> </h1>
@@ -22,17 +25,17 @@
 		</ul>
 	</div>
 	<div class="overview_content">
-		<h2>Overview</h2>
+		<h2 id="overview">Overview</h2>
 		<p><%= article.overview %></p>
 	</div>
 	<hr>
 	<div class="history_content">
-		<h2>History</h2>
+		<h2 id="history">History</h2>
 		<p><%= article.history %></p>
 	</div>
 	<hr>
 	<div class="rules_content">
-		<h2>Rules</h2>
+		<h2 id="rules">Rules</h2>
 		<p><%= article.rules %></p>
 	</div>
 </div>

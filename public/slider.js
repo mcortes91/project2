@@ -9,10 +9,13 @@ $(function(){
         },
         content: {
           images: [
-            "images/baseball.jpg",
-            "images/nba.jpg",
-            "images/nfl.jpg",
-            "images/soccer.jpg"
+            "/images/baseball.jpg",
+            "/images/nba.jpg",
+            "/images/nfl.jpg",
+            "/images/soccer.jpg",
+            "/images/volleyball.jpg",
+            "/images/tennis.jpg",
+            "/images/hockey.jpg"
           ],
         },
         animation: {
